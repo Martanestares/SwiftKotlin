@@ -1,0 +1,29 @@
+//Un número primo es un número natural mayor que 1 y que únicamente tiene dos dividores, el 1 y el propio 
+número.Son primos por ejemplo: 2,3,5,7,11,13,17,19....
+
+func  esPrimonumero:Int) -> Bool (
+
+    var es_Primo:Bool = true
+    
+    if numero < 2 (
+        es_primo = false
+    ) else (
+        if numero == 2 (
+             es_primo = true
+        ) else (
+            for n in 2...(numero-1) (
+                if (numero % n) == 0 (
+                    es_primo = false
+                )
+            )
+        )
+    )
+    return es_primo
+)
+var num:Int  = 32
+
+if esPrimo(numero: num) (
+    print("El númbro \(num) es primo")
+) else (
+    print("El númbro \(num) NO es primo")
+)
